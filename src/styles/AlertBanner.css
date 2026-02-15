@@ -1,0 +1,89 @@
+.alert-banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid;
+  position: relative;
+}
+
+.alert-banner.compact { padding: 10px 14px; }
+
+.alert-danger   { background: rgba(230,57,70,0.08);  border-color: rgba(230,57,70,0.3);  }
+.alert-warning  { background: rgba(244,162,97,0.08); border-color: rgba(244,162,97,0.3); }
+.alert-advisory { background: rgba(76,201,240,0.08); border-color: rgba(76,201,240,0.3); }
+.alert-resolved { background: rgba(6,214,160,0.08);  border-color: rgba(6,214,160,0.3);  }
+
+.alert-icon {
+  font-size: 20px;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.alert-danger   .alert-icon { color: var(--accent-red);    }
+.alert-warning  .alert-icon { color: var(--accent-orange); }
+.alert-advisory .alert-icon { color: var(--accent-blue);   }
+.alert-resolved .alert-icon { color: var(--accent-green);  }
+
+.alert-content { flex: 1; min-width: 0; }
+
+.alert-header-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+}
+
+.alert-level-tag {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.alert-danger   .alert-level-tag { background: var(--accent-red);    color: #fff; }
+.alert-warning  .alert-level-tag { background: var(--accent-orange); color: #fff; }
+.alert-advisory .alert-level-tag { background: var(--accent-blue);   color: #0a0e1a; }
+.alert-resolved .alert-level-tag { background: var(--accent-green);  color: #0a0e1a; }
+
+.alert-zone {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.alert-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.alert-message {
+  font-size: 13px;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.alert-meta {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.alert-dismiss {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+.alert-dismiss:hover { color: var(--text-primary); }

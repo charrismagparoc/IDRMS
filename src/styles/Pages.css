@@ -1,0 +1,102 @@
+/* Shared styles for all pages */
+.summary-pills {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.summary-pill { font-size: 12px; padding: 5px 12px; }
+
+.mono { font-family: monospace; font-size: 12px; }
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.detail-item.full { grid-column: span 2; }
+.detail-item > span:first-child { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+.detail-item > strong { font-size: 14px; }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.form-grid .form-group.full { grid-column: span 2; }
+
+textarea.form-control { resize: vertical; }
+
+.cap-bar-wrap {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-deep);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.cap-bar { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.cap-bar.open   { background: var(--accent-green); }
+.cap-bar.full   { background: var(--accent-red); }
+.cap-bar.closed { background: var(--text-muted); }
+
+/* Vulnerability tag */
+.vuln-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(123,94,167,0.15);
+  color: #b39ddb;
+  border: 1px solid rgba(123,94,167,0.3);
+  margin: 2px;
+}
+
+/* Risk Card */
+.risk-card {
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg-deep);
+  transition: border-color 0.2s;
+}
+.risk-card:hover { border-color: var(--border-accent); }
+
+.risk-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.risk-high   .risk-icon { background: rgba(230,57,70,0.12);  color: var(--accent-red); }
+.risk-medium .risk-icon { background: rgba(244,162,97,0.12); color: var(--accent-orange); }
+.risk-low    .risk-icon { background: rgba(6,214,160,0.1);   color: var(--accent-green); }
+
+.risk-info { flex: 1; }
+.risk-zone  { font-weight: 700; font-size: 14px; }
+.risk-desc  { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+/* Resource Status */
+.res-status-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+.res-bar-wrap { flex: 1; height: 6px; background: var(--bg-deep); border-radius: 3px; overflow: hidden; }
+.res-bar { height: 100%; border-radius: 3px; }
